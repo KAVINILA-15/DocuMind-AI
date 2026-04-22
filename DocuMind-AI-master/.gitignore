@@ -1,0 +1,16 @@
+# Environment variables
+.env
+
+# Python virtual environment
+venv/
+
+# FAISS index files
+faiss_index/
+
+# Temporary uploaded PDFs
+temp_pdfs/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
