@@ -18,8 +18,8 @@ It ensures:
   - 🟠 **HuggingFace** — `BAAI/bge-small-en` (runs locally, free, no API needed)
   - 🔵 **Google Gemini** — `gemini-embedding-001` (cloud, requires API key)
 - ⚡ Two retrieval strategies:
-- **Cosine Similarity**
-- **MMR**
+  - **Cosine Similarity**
+  - **MMR**
 - Vector storage using FAISS
 - LLM-based answer generation
 - Top-3 supporting source citations
@@ -268,6 +268,17 @@ You need to upload PDFs and click **⚡ Process Documents** before asking questi
 | `python-dotenv` | Load `.env` API keys |
 | `google-genai` | Google Gemini SDK (generation + embeddings) |
 | `sentence-transformers` | HuggingFace model backend |
+
+---
+
+## 🚧 Future Improvements (Optional Enhancements)
+
+These are potential extensions to further enhance the system:
+
+- Add chat history persistence for multi-session interaction
+- Improve retrieval accuracy using reranking models
+- Support additional document formats (DOCX, TXT)
+- Deploy the application for public access
 
 ---
 
