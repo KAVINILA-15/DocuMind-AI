@@ -194,8 +194,7 @@ The app will open automatically in your browser at:
 
 ## 📸 Demo Screenshot
 
-<img width="1920" height="1080" alt="Screenshot (485)" src="https://github.com/user-attachments/assets/ca6347fd-3a04-49f0-bd1a-f87dc76903da" />
-
+<img width="1582" height="763" alt="Screenshot 2026-04-24 211635" src="https://github.com/user-attachments/assets/302f3a3d-3898-43ab-af3a-0d435ebbaacb" />
 
 ## 📖 How to Use
 
