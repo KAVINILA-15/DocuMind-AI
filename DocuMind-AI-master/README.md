@@ -1,8 +1,11 @@
 # 🤖 DocuMindAI — Strict Document QA Agent
 
-A powerful **Retrieval-Augmented Generation (RAG)** application that answers questions **strictly from your uploaded PDF documents** — no hallucinations, with full source citations.
+DocuMind AI is a Retrieval-Augmented Generation (RAG) based document question-answering system that allows users to upload PDFs and get accurate answers grounded in document content.
 
-Built with **Streamlit**, **LangChain**, **FAISS**, and **Google Gemini**.
+It ensures:
+- No hallucinations
+- Source-backed answers
+- Flexible embedding & retrieval strategies
 
 ---
 
