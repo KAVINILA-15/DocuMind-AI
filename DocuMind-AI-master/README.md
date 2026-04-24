@@ -199,6 +199,8 @@ The app will open automatically in your browser at:
 
 <img width="1582" height="763" alt="Screenshot 2026-04-24 211635" src="https://github.com/user-attachments/assets/302f3a3d-3898-43ab-af3a-0d435ebbaacb" />
 
+---
+
 ## 📖 How to Use
 
 ### Step 1 — Configure the Sidebar
