@@ -42,7 +42,7 @@ DocuMindAI/
 ├── rag_pipeline.py     # Gemini LLM answer generation
 ├── requirements.txt    # Python dependencies
 └── faiss_index/        # Auto-created after processing PDFs
-
+```
 ---
 
 ## 🏗️ Architecture
