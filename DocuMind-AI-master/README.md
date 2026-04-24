@@ -77,10 +77,10 @@ DocuMindAI/
 
 ## 🧪 Embedding Comparison
 
-| Model                | Type                | Result     | Observation                       | Final Decision |
-| -------------------- | ------------------- | ---------- | --------------------------------- | -------------- |
-| BAAI/bge-small-en    | Open-source (local) | Stable     | Free, fast, no API limits         | Selected       |
-| Gemini embedding-001 | Cloud (commercial)  | Limited    | Good quality but API quota issues | Not selected   |
+| Model                | Type                | Result     | Observation                                   | Final Decision |
+| -------------------- | ------------------- | ---------- | --------------------------------------------- | -------------- |
+| BAAI/bge-small-en    | Open-source (local) | Stable     | Free, fast, no API limits                     | Selected       |
+| Gemini embedding-001 | Cloud (commercial)  | Working    | Good quality but depends on API key and quota | Optional       |
 
 ---
 
@@ -114,7 +114,7 @@ DocuMindAI/
 
 - This system does not hallucinate.
 - If the answer is not found in the document, it returns:
-  ** “I don't know” **
+  **“I don't know”**
 
 ---
 
