@@ -31,6 +31,7 @@ It ensures:
 
 ## 🗂️ Project Structure
 
+```text
 DocuMindAI/
 ├── app.py              # Main Streamlit UI entry point
 ├── loader.py           # PDF loading with PyPDF
@@ -41,7 +42,7 @@ DocuMindAI/
 ├── rag_pipeline.py     # Gemini LLM answer generation
 ├── requirements.txt    # Python dependencies
 └── faiss_index/        # Auto-created after processing PDFs
-
+```
 ---
 
 ## 🏗️ Architecture
@@ -94,13 +95,18 @@ DocuMindAI/
 
 ## 📊 Testing & Evaluation
 
-| Question                 | Result         | Observation             |
-| ------------------------ | -------------- | ----------------------- |
-| What is attention?       | Correct        | Retrieved from document |
-| Summarize the document   | Correct        | Good coverage           |
-| How does attention help? | Correct        | Matches source          |
-| What is RAG?             | Not answered   | Not present in PDF      |
-| Summarize experiments    | Correct        | Supported by sources    |
+|               Question                  |    Result    |       Observation       |
+|-----------------------------------------|--------------|-------------------------|
+| What is the main topic of the document? | Correct      | Retrieved from document |
+| What is transformer architecture?       | Correct      | Matches content         |
+| What is the role of attention?          | Correct      | Retrieved correctly     |
+| How does attention help in NLP tasks?   | Correct      | Context-based answer    |
+| Explain the methodology used            | Correct      | Multi-chunk retrieval   |
+| Summarize the document                  | Correct      | Good coverage           |
+| Summarize experiments and results       | Correct      | Supported by sources    |
+| What performance metrics are mentioned? | Correct      | Retrieved correctly     |
+| What improvements are shown?            | Correct      | Matches document        |
+| What is RAG?                            | Not answered | Not present in PDF      |
 
 ---
 
@@ -108,7 +114,7 @@ DocuMindAI/
 
 - This system does not hallucinate.
 - If the answer is not found in the document, it returns:
-- “I don't know”
+  ** “I don't know” **
 
 ---
 
@@ -227,7 +233,7 @@ The app will open automatically in your browser at:
 
 | Purpose | Model | Notes |
 |---|---|---|
-| Answer Generation | `gemini-3.1-flash-lite-preview` | Default — fastest, experimental |
+| Answer Generation | `gemini-3.1-flash-lite-preview` | Default — fast response generation |
 | Answer Generation | `gemini-2.0-flash` | Stable, recommended backup |
 | Answer Generation | `gemini-1.5-flash` | Optional backup if supported by API account |
 | Embeddings (cloud) | `gemini-embedding-001` | Requires API key, v1beta endpoint |
