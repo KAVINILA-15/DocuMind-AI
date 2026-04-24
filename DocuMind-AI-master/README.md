@@ -14,7 +14,13 @@ Built with **Streamlit**, **LangChain**, **FAISS**, and **Google Gemini**.
 - 🔢 Two embedding options:
   - 🟠 **HuggingFace** — `BAAI/bge-small-en` (runs locally, free, no API needed)
   - 🔵 **Google Gemini** — `gemini-embedding-001` (cloud, requires API key)
-- ⚡ Two retrieval strategies: **Cosine Similarity** and **MMR**
+- ⚡ Two retrieval strategies:
+- **Cosine Similarity**
+- **MMR**
+- Vector storage using FAISS
+- LLM-based answer generation
+- Top-3 supporting source citations
+- No hallucination (strict QA mode)
 - ➕ Append or replace document index on each upload
 - 🗑️ Two-step deletion for safe index management
 
@@ -22,7 +28,6 @@ Built with **Streamlit**, **LangChain**, **FAISS**, and **Google Gemini**.
 
 ## 🗂️ Project Structure
 
-```
 DocuMindAI/
 ├── app.py              # Main Streamlit UI entry point
 ├── loader.py           # PDF loading with PyPDF
@@ -32,9 +37,29 @@ DocuMindAI/
 ├── retriever.py        # Retriever logic (similarity & MMR)
 ├── rag_pipeline.py     # Gemini LLM answer generation
 ├── requirements.txt    # Python dependencies
-├── .env                # Your API key (DO NOT commit this)
 └── faiss_index/        # Auto-created after processing PDFs
-```
+
+---
+
+## 🏗️ Architecture
+
+- Upload PDF documents
+- Extract and split text into chunks
+- Generate embeddings
+- Store vectors in FAISS
+- Retrieve relevant chunks
+- Generate answer using LLM
+- Display answer with source references
+
+---
+
+## ⚙️ Tech Stack
+
+- Python
+- Streamlit
+- FAISS
+- HuggingFace Sentence Transformers
+- Google Gemini API
 
 ---
 
@@ -43,6 +68,44 @@ DocuMindAI/
 - **Python 3.10 – 3.13** (Python 3.14 has limited package support, use 3.11 or 3.12 if possible)
 - A **Google Gemini API Key** (free tier available) — get yours at [aistudio.google.com](https://aistudio.google.com/)
 - Git (optional, for cloning)
+
+---
+
+## 🧪 Embedding Comparison
+
+| Model                | Type                | Result     | Observation                       | Final Decision |
+| -------------------- | ------------------- | ---------- | --------------------------------- | -------------- |
+| BAAI/bge-small-en    | Open-source (local) | Stable     | Free, fast, no API limits         | Selected       |
+| Gemini embedding-001 | Cloud (commercial)  | Limited    | Good quality but API quota issues | Not selected   |
+
+---
+
+## 🔍 Retrieval Strategy Comparison
+
+| Strategy          | Result     | Observation                       | Final Decision |
+| ----------------- | ---------- | --------------------------------- | -------------- |
+| Cosine Similarity | Accurate   | Best for direct questions         | Selected       |
+| MMR               | Diverse    | Good for variety but less precise | Secondary      |
+
+---
+
+## 📊 Testing & Evaluation
+
+| Question                 | Result         | Observation             |
+| ------------------------ | -------------- | ----------------------- |
+| What is attention?       | Correct        | Retrieved from document |
+| Summarize the document   | Correct        | Good coverage           |
+| How does attention help? | Correct        | Matches source          |
+| What is RAG?             | Not answered   | Not present in PDF      |
+| Summarize experiments    | Correct        | Supported by sources    |
+
+---
+
+## 🧠 Key Feature (Strict QA Mode)
+
+- This system does not hallucinate.
+- If the answer is not found in the document, it returns:
+- “I don't know”
 
 ---
 
@@ -128,6 +191,11 @@ The app will open automatically in your browser at:
 **http://localhost:8501**
 
 ---
+
+## 📸 Demo Screenshot
+
+<img width="1920" height="1080" alt="Screenshot (485)" src="https://github.com/user-attachments/assets/ca6347fd-3a04-49f0-bd1a-f87dc76903da" />
+
 
 ## 📖 How to Use
 
