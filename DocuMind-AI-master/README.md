@@ -229,7 +229,7 @@ The app will open automatically in your browser at:
 |---|---|---|
 | Answer Generation | `gemini-3.1-flash-lite-preview` | Default — fastest, experimental |
 | Answer Generation | `gemini-2.0-flash` | Stable, recommended backup |
-| Answer Generation | `gemini-1.5-flash` | Highest free-tier quota |
+| Answer Generation | `gemini-1.5-flash` | Optional backup if supported by API account |
 | Embeddings (cloud) | `gemini-embedding-001` | Requires API key, v1beta endpoint |
 | Embeddings (local) | `BAAI/bge-small-en` | Free, runs on CPU, no API needed |
 
@@ -247,7 +247,7 @@ python -m streamlit run app.py
 Make sure your API key is valid and has access to the Gemini API. The embedding client uses the `v1beta` endpoint which requires a valid Gemini API key.
 
 ### `RESOURCE_EXHAUSTED` / 429 Rate Limit Error
-Your API free-tier quota is exhausted for the selected model. Switch to **`gemini-1.5-flash`** or **`gemini-2.0-flash-lite`** in the sidebar — they have separate quotas.
+Your API free-tier quota is exhausted for the selected model. Switch to **`gemini-1.5-flash`** or **`gemini-2.0-flash-lite-preview`** in the sidebar — they have separate quotas.
 
 ### HuggingFace model download is slow
 The first run downloads ~130MB of model weights. Subsequent runs are fast as they are cached locally.
