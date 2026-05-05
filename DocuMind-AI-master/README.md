@@ -99,14 +99,14 @@ DocuMindAI/
 |-----------------------------------------|--------------|-------------------------|
 | What is the main topic of the document? | Correct      | Retrieved from document |
 | What is transformer architecture?       | Correct      | Matches content         |
-| What is the role of attention?          | Correct      | Retrieved correctly     |
-| How does attention help in NLP tasks?   | Correct      | Context-based answer    |
+| What is Artificial Intelligence?        | Correct      | Matches document content|
+| Explain neural networks                 | Correct      | Multi-chunk retrieval   |
 | Explain the methodology used            | Correct      | Multi-chunk retrieval   |
 | Summarize the document                  | Correct      | Good coverage           |
-| Summarize experiments and results       | Correct      | Supported by sources    |
-| What performance metrics are mentioned? | Correct      | Retrieved correctly     |
-| What improvements are shown?            | Correct      | Matches document        |
+| What is cloud computing?                | Correct      | Matches document content|
+| What future trends are mentioned?       | Correct      | Retrieved correctly     |
 | What is RAG?                            | Not answered | Not present in PDF      |
+| Who invented Python?                    | Not answered | Not present in PDF      |
 
 ---
 
