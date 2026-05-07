@@ -32,16 +32,25 @@ It ensures:
 ## 🗂️ Project Structure
 
 ```text
-DocuMindAI/
-├── app.py              # Main Streamlit UI entry point
-├── loader.py           # PDF loading with PyPDF
-├── chunking.py         # Text splitting strategies (A & B)
-├── embeddings.py       # HuggingFace & Gemini embedding wrappers
-├── vectorstore.py      # FAISS index create / load / delete
-├── retriever.py        # Retriever logic (similarity & MMR)
-├── rag_pipeline.py     # Gemini LLM answer generation
-├── requirements.txt    # Python dependencies
-└── faiss_index/        # Auto-created after processing PDFs
+
+DocuMind AI Capstone project/
+├── .env                         # API keys and environment variables
+├── .gitignore                   # Ignore unnecessary files
+├── app.py                       # Main Streamlit application
+├── chunking.py                  # PDF chunking logic
+├── embeddings.py                # Embedding model handling
+├── evaluation.md                # Testing & evaluation results
+├── generate_ipynb.py            # Generates/export notebook
+├── loader.py                    # PDF loading functions
+├── rag_pipeline.py              # Complete RAG workflow pipeline
+├── README.md                    # Project documentation
+├── requirements.txt             # Python dependencies
+├── retriever.py                 # Retrieval logic (Cosine/MMR)
+├── vectorstore.py               # FAISS vector database handling
+│
+├── faiss_index/                 # Stored vector database
+    ├── index.faiss
+    └── index.pkl
 ```
 ---
 
@@ -97,14 +106,14 @@ DocuMindAI/
 
 |               Question                  |    Result    |       Observation       |
 |-----------------------------------------|--------------|-------------------------|
-| What is the main topic of the document? | Correct      | Retrieved from document |
-| What is transformer architecture?       | Correct      | Matches content         |
-| What is Artificial Intelligence?        | Correct      | Matches document content|
-| Explain neural networks                 | Correct      | Multi-chunk retrieval   |
+| What is Self-RAG?                       | Correct      | Retrieved from document |
+| What are reflection tokens?             | Correct      | Retrieved correctly     |
+| What are the types of reflection tokens?| Correct      | Matches document content|
+| Summarize the Self-RAG paper            | Correct      | Multi-chunk retrieval   |
 | Explain the methodology used            | Correct      | Multi-chunk retrieval   |
-| Summarize the document                  | Correct      | Good coverage           |
-| What is cloud computing?                | Correct      | Matches document content|
-| What future trends are mentioned?       | Correct      | Retrieved correctly     |
+| What is BERT?                           | Correct      | Good retrieval          |
+| What is masked language modeling?       | Correct      | Matches document content|
+| What future trends are mentioned?       | Not answered | Not present in PDF      |
 | What is RAG?                            | Not answered | Not present in PDF      |
 | Who invented Python?                    | Not answered | Not present in PDF      |
 
